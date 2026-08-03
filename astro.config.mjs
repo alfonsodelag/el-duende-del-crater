@@ -12,7 +12,7 @@ const env = loadEnv("", process.cwd(), ["STORYBLOK", "NETLIFY"]);
  
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astrogency.unfolding.io/", // change this to your domain
+  site: "https://alfonsodelag-el-duende-del-crater.vercel.app/",
 
   adapter: env.NETLIFY ? netlify() : vercel(), // vercel() or netlify()
   integrations: [
