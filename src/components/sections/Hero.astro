@@ -18,15 +18,14 @@ import { siteConfig, whatsappLinks } from "@/data/site";
       <Button href={whatsappLinks.personal} variant="secondary">Pide al Duende</Button>
     </div>
   </div>
-  <div class="hero-stage" aria-label="Ilustración abstracta de botella, cráter y espuma">
-    <div class="sun"></div>
-    <div class="mountain mountain-back"></div>
-    <div class="mountain mountain-front"></div>
-    <div class="crater"></div>
-    <div class="bottle">
-      <span class="bottle-neck"></span>
-      <span class="bottle-label">TODO<br />asset real</span>
+  <div class="hero-stage" aria-label="Logo y cerveza artesanal de El Duende del Cráter">
+    <div class="hero-logo-card">
+      <img src={siteConfig.logo} alt="Logo redondo de El Duende del Cráter" width="420" height="420" />
     </div>
+    <figure class="hero-photo-card">
+      <img src={siteConfig.heroImage} alt="Vaso de cerveza artesanal frente a un jardín en El Valle" width="768" height="1024" loading="eager" />
+      <figcaption>Hecha en El Valle, Panamá</figcaption>
+    </figure>
     <span class="bubble bubble-one"></span>
     <span class="bubble bubble-two"></span>
     <span class="bubble bubble-three"></span>

@@ -4,12 +4,17 @@ import { navigation, siteConfig, whatsappLinks } from "@/data/site";
 
 <footer class="site-footer">
   <div class="footer-grid">
-    <div>
-      <p class="footer-brand">{siteConfig.name}</p>
-      <p>
-        Cerveza artesanal de {siteConfig.location}. Hecha en pequeños lotes,
-        con datos comerciales por confirmar antes de publicar catálogo oficial.
-      </p>
+    <div class="footer-brand-block">
+      <span class="footer-logo-shell" aria-hidden="true">
+        <img src={siteConfig.logo} alt="" width="128" height="128" loading="lazy" />
+      </span>
+      <div>
+        <p class="footer-brand">{siteConfig.name}</p>
+        <p>
+          Cerveza artesanal de {siteConfig.location}. Hecha en pequeños lotes,
+          con datos comerciales por confirmar antes de publicar catálogo oficial.
+        </p>
+      </div>
     </div>
     <nav aria-label="Navegación de pie de página">
       {

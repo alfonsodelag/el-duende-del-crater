@@ -6,16 +6,13 @@ import { navigation, siteConfig, whatsappLinks } from "@/data/site";
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <nav class="nav-shell" aria-label="Navegación principal">
     <a class="brand-mark" href="/" aria-label="Inicio de El Duende del Cráter">
-      {
-        siteConfig.logo ? (
-          <img src={siteConfig.logo} alt="El Duende del Cráter" width="160" height="72" />
-        ) : (
-          <span class="brand-wordmark">
-            <span>El Duende</span>
-            <small>del Cráter</small>
-          </span>
-        )
-      }
+      <span class="brand-logo-shell" aria-hidden="true">
+        <img src={siteConfig.logo} alt="" width="96" height="96" />
+      </span>
+      <span class="brand-wordmark">
+        <span>El Duende</span>
+        <small>del Cráter</small>
+      </span>
     </a>
 
     <div class="desktop-links">

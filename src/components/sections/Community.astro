@@ -8,9 +8,19 @@ import SectionHeading from "@components/ui/SectionHeading.astro";
     eyebrow="Comunidad"
     id="community-title"
     title="Ferias, proceso y pequeñas apariciones"
-    text="Sin integración pesada de Instagram por ahora. La cuadrícula queda lista para fotos reales del proceso, clientes, eventos y colaboraciones."
+    text="Una mirada real al universo de El Duende del Cráter: el puesto, la cerveza servida y el emblema que acompaña cada lote."
   />
   <div class="social-grid">
-    {socialTiles.map((tile) => <div><span>TODO</span><p>{tile}</p></div>)}
+    {
+      socialTiles.map((tile) => (
+        <article>
+          <img src={tile.image} alt={tile.alt} width="720" height="720" loading="lazy" />
+          <div>
+            <span>{tile.label}</span>
+            <p>{tile.title}</p>
+          </div>
+        </article>
+      ))
+    }
   </div>
 </section>

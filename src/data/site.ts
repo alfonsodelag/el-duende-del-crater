@@ -7,8 +7,10 @@ export const siteConfig = {
   whatsapp: "",
   instagram: "",
   email: "",
-  logo: "",
-  // TODO: completar WhatsApp, Instagram, email y logo oficial cuando el propietario los comparta.
+  logo: "/images/brand/duende-logo.png",
+  heroImage: "/images/gallery/duende-beer.png",
+  teamImage: "/images/gallery/duende-team.png",
+  // TODO: completar WhatsApp, Instagram y email cuando el propietario los comparta.
 };
 
 export const navigation = [
@@ -62,8 +64,22 @@ export const brewingSteps = [
 ] as const;
 
 export const socialTiles = [
-  "Proceso en olla",
-  "Etiquetas pendientes",
-  "Ferias y colaboraciones",
-  "Clientes y puntos de venta",
+  {
+    label: "Feria",
+    title: "El puesto del Duende",
+    image: siteConfig.teamImage,
+    alt: "Dos personas atendiendo el puesto de El Duende del Cráter en una feria",
+  },
+  {
+    label: "Lote",
+    title: "Cerveza servida en El Valle",
+    image: siteConfig.heroImage,
+    alt: "Vaso de cerveza artesanal frente a un jardín soleado",
+  },
+  {
+    label: "Marca",
+    title: "Emblema del cráter",
+    image: siteConfig.logo,
+    alt: "Logo redondo de El Duende del Cráter",
+  },
 ] as const;

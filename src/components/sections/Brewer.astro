@@ -1,17 +1,19 @@
 ---
+import { siteConfig } from "@/data/site";
 import SectionHeading from "@components/ui/SectionHeading.astro";
 ---
 
 <section class="section-shell brewer-section" id="brewer" aria-labelledby="brewer-title">
-  <div class="brewer-photo" role="img" aria-label="Placeholder para fotografía real del brewer">
-    <span>TODO<br />foto real</span>
-  </div>
+  <figure class="brewer-photo">
+    <img src={siteConfig.teamImage} alt="Equipo de El Duende del Cráter atendiendo su puesto" width="558" height="741" loading="lazy" />
+    <figcaption>El Duende aparece donde hay lote fresco y buena conversación.</figcaption>
+  </figure>
   <div>
     <SectionHeading
       eyebrow="El brewer"
       id="brewer-title"
-    title="Una persona, pequeños lotes y una obsesión poco razonable por hacer mejor cerveza"
-      text="Detrás de la marca hay un brewer independiente. Este espacio queda listo para su nombre, fotografía, biografía breve, filosofía de elaboración y estilos favoritos cuando estén confirmados."
+      title="Una persona, pequeños lotes y una obsesión poco razonable por hacer mejor cerveza"
+      text="Detrás de la marca hay un brewer independiente. Este espacio queda listo para su nombre, biografía breve, filosofía de elaboración y estilos favoritos cuando estén confirmados."
     />
     <ul class="brewer-list">
       <li>Nombre: TODO</li>
