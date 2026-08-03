@@ -9,7 +9,7 @@ import { siteConfig, whatsappLinks } from "@/data/site";
     eyebrow="Contacto"
     id="contact-title"
     title="Pedidos, preguntas y oportunidades"
-    text="Escríbele al Duende por WhatsApp para consultar disponibilidad, próximos lotes o propuestas comerciales. Instagram y email quedan pendientes de confirmación."
+    text="Escríbele al Duende por WhatsApp para consultar disponibilidad, próximos lotes o propuestas comerciales. También puedes seguir la marca en Instagram."
   />
   <div class="contact-grid">
     <div class="contact-panel">
@@ -24,7 +24,7 @@ import { siteConfig, whatsappLinks } from "@/data/site";
     </div>
     <dl class="contact-list">
       <div><dt>WhatsApp</dt><dd><a href={whatsappLinks.personal}>{siteConfig.whatsappDisplay}</a></dd></div>
-      <div><dt>Instagram</dt><dd>{siteConfig.instagram || "TODO confirmar"}</dd></div>
+      <div><dt>Instagram</dt><dd><a href={siteConfig.instagramUrl} target="_blank" rel="noopener noreferrer">@{siteConfig.instagram}</a></dd></div>
       <div><dt>Email</dt><dd>{siteConfig.email || "TODO confirmar"}</dd></div>
     </dl>
   </div>

@@ -1,78 +1,78 @@
-# El Duende del Cráter
+# El Duende del Crater
 
-Sitio oficial de **El Duende del Cráter**, una marca panameña de cerveza artesanal hecha en El Valle de Antón, Panamá.
+Official website for **El Duende del Crater**, an independent Panamanian craft beer brand made in El Valle de Anton, Panama.
 
-La página presenta la marca, el universo del Duende, fotos reales, cervezas destacadas en modo demo y canales de contacto para pedidos personales o consultas comerciales.
+The site presents the brand, the Duende universe, real photography, demo beer cards, and contact channels for personal orders and business inquiries.
 
-## Sitio en Producción
+## Production Site
 
 - Vercel: https://alfonsodelag-el-duende-del-crater.vercel.app
 - GitHub: https://github.com/alfonsodelag/el-duende-del-crater
 
-## Estado del Contenido
+## Content Status
 
-El sitio ya incluye:
+The site already includes:
 
-- Logo oficial en header, hero y footer.
-- Fotografías reales en hero, sección del brewer y comunidad.
-- WhatsApp real: `6337-0513`.
-- Estructura para catálogo de cervezas, lote destacado, puntos de venta, eventos y oportunidades B2B.
+- Official logo in the header, hero, footer, and sharing preview image.
+- Real photos in the hero, brewer section, and community gallery.
+- WhatsApp: `6337-0513`.
+- Instagram: `@duendedelcrater`.
+- Structure for beer catalog, featured batch, points of sale, events, and B2B opportunities.
 
-Información pendiente antes de considerar el contenido final:
+Information still needed before the content can be considered final:
 
-- Instagram oficial.
-- Email público, si aplica.
-- Catálogo real de cervezas: nombres, estilos, ABV, IBU, notas, formatos, disponibilidad, lotes e imágenes de etiqueta/producto.
-- Datos del brewer: nombre, biografía breve, filosofía de elaboración y redes.
-- Historia oficial de la marca y la leyenda del Duende.
-- Puntos de venta confirmados.
-- Calendario de ferias, eventos o colaboraciones.
-- Detalles comerciales para negocios: formatos, mínimos, zona de entrega y proceso de contacto.
+- Public email, if the brand wants one listed.
+- Real beer catalog: names, styles, ABV, IBU, tasting notes, formats, availability, batches, and label/product images.
+- Brewer details: name, short bio, brewing philosophy, and social links.
+- Official brand story and Duende legend.
+- Confirmed points of sale.
+- Market, event, or collaboration calendar.
+- Business details: wholesale formats, minimum orders, delivery/service area, and contact process.
 
 ## Stack
 
 - Astro
 - TypeScript
-- Vue islands donde el template original lo requiere
-- Tailwind CSS / CSS moderno
+- Vue islands where the original base template still requires them
+- Tailwind CSS / modern CSS
 - Vercel adapter
-- Storyblok integrado en el template base, aunque la home actual usa datos locales en `src/data`
+- Storyblok integration remains from the base template, while the current home page uses local data in `src/data`
 
-## Estructura Principal
+## Main Structure
 
 ```text
 src/
-  components/layout/      Header y footer del sitio del Duende
-  components/sections/    Secciones de la home
-  components/ui/          Componentes pequeños reutilizables
-  data/                   Datos locales de marca y cervezas demo
-  layouts/                Layout del sitio del Duende
-  pages/index.astro       Home principal
-  styles/duende.css       Estilos de marca
-public/images/            Logo y fotos reales
+  components/layout/      Header and footer for the Duende site
+  components/sections/    Home page sections
+  components/ui/          Small reusable components
+  data/                   Local brand and demo beer data
+  layouts/                Duende site layout
+  pages/index.astro       Main home page
+  styles/duende.css       Brand styles
+public/images/            Logo, real photos, and sharing preview image
 ```
 
-## Comandos
+## Commands
 
-Instalar dependencias:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Levantar desarrollo local:
+Run local development:
 
 ```bash
 npm run dev
 ```
 
-Validar y construir producción:
+Validate and build production:
 
 ```bash
 npm run build
 ```
 
-Previsualizar build:
+Preview the build:
 
 ```bash
 npm run preview
@@ -80,27 +80,27 @@ npm run preview
 
 ## Deploy
 
-El proyecto está desplegado en Vercel como:
+The Vercel project is:
 
 ```text
 alfonsodelag-el-duende-del-crater
 ```
 
-Para desplegar manualmente desde esta carpeta:
+Manual production deploy from this folder:
 
 ```bash
 vercel deploy --prebuilt --prod --yes --project alfonsodelag-el-duende-del-crater
 ```
 
-Si se hacen cambios de código, primero corre:
+If code changes were made, run this first:
 
 ```bash
 npm run build
 ```
 
-## Notas de Desarrollo
+## Development Notes
 
-- No inventar datos de producto, precios, disponibilidad, distribuidores o testimonios.
-- Cualquier contenido provisional debe quedar marcado como `TODO` o `DEMO`.
-- El sitio representa una marca de cerveza artesanal, no un restaurante, bar o taproom.
-- Mantener el logo como activo oficial; no redibujarlo ni recolorearlo.
+- Do not invent product data, prices, availability, distributors, or testimonials.
+- Any provisional content must stay marked as `TODO` or `DEMO`.
+- The site represents a craft beer brand, not a restaurant, bar, or taproom.
+- Keep the logo as the official asset; do not redraw or recolor it.

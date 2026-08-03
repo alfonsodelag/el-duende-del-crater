@@ -6,13 +6,14 @@ export const siteConfig = {
   canonicalUrl: "https://alfonsodelag-el-duende-del-crater.vercel.app/",
   whatsapp: "50763370513",
   whatsappDisplay: "6337-0513",
-  instagram: "",
+  instagram: "duendedelcrater",
+  instagramUrl: "https://www.instagram.com/duendedelcrater/",
   email: "",
   logo: "/images/brand/duende-logo.png",
   ogImage: "/images/brand/duende-whatsapp-preview.png",
   heroImage: "/images/gallery/duende-beer.png",
   teamImage: "/images/gallery/duende-team.png",
-  // TODO: completar Instagram y email cuando el propietario los comparta.
+  // TODO: completar email cuando el propietario lo comparta.
 };
 
 export const navigation = [
