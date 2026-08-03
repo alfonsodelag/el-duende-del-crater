@@ -213,7 +213,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Astrogency",
+              "text": "El Duende del Crater",
               "type": "text",
               "marks": [
                 {
@@ -222,7 +222,7 @@
               ]
             },
             {
-              "text": " – The Green Astro Web Template for Future-Driven, Sustainable Agencies.",
+              "text": " â€“ The Green Astro Web Template for Future-Driven, Sustainable Agencies.",
               "type": "text"
             }
           ]
@@ -244,7 +244,7 @@
         }
       ]
     },
-    "company_name": "Astrogency",
+    "company_name": "El Duende del Crater",
     "contact_form": [
       {
         "_uid": "917b98ff-d58b-49cc-a50c-9cdc2cd205b9",
@@ -259,7 +259,7 @@
               },
               "content": [
                 {
-                  "text": "Hello! We’re excited to connect with you. ",
+                  "text": "Hello! Weâ€™re excited to connect with you. ",
                   "type": "text"
                 }
               ]
@@ -325,7 +325,7 @@
       },
       "is_external_url": false
     },
-    "blog_og_title": "Astrogency News",
+    "blog_og_title": "El Duende del Crater News",
     "font_headings": "--font-system-ui",
     "footer_menu_1": [
       {
@@ -472,7 +472,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Astrogency - De groene Astro Thema voor toekomstgerichte, duurzame bureaus. ",
+              "text": "El Duende del Crater - De groene Astro Thema voor toekomstgerichte, duurzame bureaus. ",
               "type": "text",
               "marks": [
                 {
@@ -542,8 +542,8 @@
   "first_published_at": "2024-06-26T16:11:53.038Z",
   "last_author": {
     "id": 68956,
-    "userid": "hello@unfolding.io",
-    "friendly_name": "hello@unfolding.io"
+    "userid": "TODO confirmar email",
+    "friendly_name": "TODO confirmar email"
   },
   "last_author_id": 68956,
   "user_ids": [

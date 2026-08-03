@@ -82,7 +82,7 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Enhance your brand identity with custom illustrations designed to bring your story to life. Whether it's detailed icons, hand-drawn elements, or dynamic visuals, our illustrations are crafted to align with your brand’s personality and engage your audience. Each piece is tailored to fit seamlessly across your digital presence, adding a creative touch that sets you apart from the competition.",
+                    "text": "Enhance your brand identity with custom illustrations designed to bring your story to life. Whether it's detailed icons, hand-drawn elements, or dynamic visuals, our illustrations are crafted to align with your brandâ€™s personality and engage your audience. Each piece is tailored to fit seamlessly across your digital presence, adding a creative touch that sets you apart from the competition.",
                     "type": "text",
                     "marks": [
                       {
@@ -207,7 +207,7 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Elevate your brand with stunning, bespoke designs that captivate your audience and boost your business. Whether it’s a fresh website layout or unique visual assets, we’ll make your brand stand out.",
+                    "text": "Elevate your brand with stunning, bespoke designs that captivate your audience and boost your business. Whether itâ€™s a fresh website layout or unique visual assets, weâ€™ll make your brand stand out.",
                     "type": "text"
                   }
                 ]
@@ -224,7 +224,7 @@
           "padding_bottom": "pb-lg"
         }
       ],
-      "intro": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audience’s attention.",
+      "intro": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audienceâ€™s attention.",
       "title": "Design",
       "content": {
         "type": "doc",
@@ -233,7 +233,7 @@
             "type": "paragraph",
             "content": [
               {
-                "text": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audience’s attention. ",
+                "text": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audienceâ€™s attention. ",
                 "type": "text",
                 "marks": [
                   {
@@ -291,7 +291,7 @@
         "is_external_url": false
       },
       "page_title": "Custom Design Solutions",
-      "og_description": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audience’s attention. Our designs are not only beautiful but also optimized for performance, ensuring they support your business goals across digital platforms."
+      "og_description": "We create bespoke, visually striking designs tailored to your brand. Whether you need a full website layout, a logo, or branding assets, we focus on clean, modern aesthetics that capture your audienceâ€™s attention. Our designs are not only beautiful but also optimized for performance, ensuring they support your business goals across digital platforms."
     },
     "published": true,
     "slug": "design",
@@ -333,8 +333,8 @@
     "first_published_at": "2024-07-24T09:39:37.555Z",
     "last_author": {
       "id": 68956,
-      "userid": "hello@unfolding.io",
-      "friendly_name": "hello@unfolding.io"
+      "userid": "TODO confirmar email",
+      "friendly_name": "TODO confirmar email"
     },
     "last_author_id": 68956,
     "user_ids": [

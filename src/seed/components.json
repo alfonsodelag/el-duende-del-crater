@@ -512,7 +512,7 @@
         "filetypes": ["videos"],
         "pos": 8,
         "key": "video",
-        "description": "⚠️⚠️⚠️Keep the video files under 1MB!⚠️⚠️⚠️",
+        "description": "âš ï¸âš ï¸âš ï¸Keep the video files under 1MB!âš ï¸âš ï¸âš ï¸",
         "asset_folder_id": null
       },
       "content": {
@@ -6436,7 +6436,7 @@
       "tiny_analytics_id": {
         "type": "text",
         "pos": 72,
-        "description": "Simple and privacy-friendly,‍ website analytics. Free for one site! https://tinyanalytics.io/"
+        "description": "Simple and privacy-friendly,â€ website analytics. Free for one site! https://tinyanalytics.io/"
       },
       "radius_media": {
         "type": "number",
@@ -6807,7 +6807,7 @@
         "filetypes": ["videos"],
         "pos": 5,
         "key": "video",
-        "description": "⚠️⚠️⚠️Keep the video files under 1MB!⚠️⚠️⚠️\nnot sure? ask your \"art department\" for help.",
+        "description": "âš ï¸âš ï¸âš ï¸Keep the video files under 1MB!âš ï¸âš ï¸âš ï¸\nnot sure? ask your \"art department\" for help.",
         "asset_folder_id": null
       },
       "reverse": {

@@ -135,11 +135,11 @@ onMounted(() => {
 watch(width, (val) => {
   if (!shown.value) {
     console.log(
-      "%c ♻️🔋+ 🧠👷🏽+ 🗜 = 🚀🍃🌐" +
+      "%c â™»ï¸ðŸ”‹+ ðŸ§ ðŸ‘·ðŸ½+ ðŸ—œ = ðŸš€ðŸƒðŸŒ" +
         "\n%cThis site has a low carbon footprint " +
-        "\n%c🪙CREDITS:" +
+        "\n%cðŸª™CREDITS:" +
         "\n%cWebsite made with Astro + Storyblok CMS" +
-        "\n%cby: https://unfolding.io",
+        "\n%cEl Duende del Cráter",
       "font-family:Verdana; font-size: 20px; color: #2A4D47; font-weight:bold; padding: 5px 0; opacity: 0.5; ",
       "font-family:Verdana; font-size: 25px; color: #2A4D47; font-weight:bold; padding: 5px 0; ",
       "font-family:Verdana; font-size:16px; color: #2A4D47; font-weight:bold;  padding: 5px 0; ",

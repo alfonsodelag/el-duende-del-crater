@@ -1,118 +1,106 @@
-# Astrogency | Astro Agency Template | Storyblok CMS
+# El Duende del Cráter
 
-[![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC_BY--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
+Sitio oficial de **El Duende del Cráter**, una marca panameña de cerveza artesanal hecha en El Valle de Antón, Panamá.
 
-### 👉 [Demo & Docs](https://astrogency.unfolding.io/)
+La página presenta la marca, el universo del Duende, fotos reales, cervezas destacadas en modo demo y canales de contacto para pedidos personales o consultas comerciales.
 
-## 📝 1. Setting up the .env file
+## Sitio en Producción
 
-rename the `env.txt` to `.env` and fill in your details
+- Vercel: https://alfonsodelag-el-duende-del-crater.vercel.app
+- GitHub: https://github.com/alfonsodelag/el-duende-del-crater
 
+## Estado del Contenido
+
+El sitio ya incluye:
+
+- Logo oficial en header, hero y footer.
+- Fotografías reales en hero, sección del brewer y comunidad.
+- WhatsApp real: `6337-0513`.
+- Estructura para catálogo de cervezas, lote destacado, puntos de venta, eventos y oportunidades B2B.
+
+Información pendiente antes de considerar el contenido final:
+
+- Instagram oficial.
+- Email público, si aplica.
+- Catálogo real de cervezas: nombres, estilos, ABV, IBU, notas, formatos, disponibilidad, lotes e imágenes de etiqueta/producto.
+- Datos del brewer: nombre, biografía breve, filosofía de elaboración y redes.
+- Historia oficial de la marca y la leyenda del Duende.
+- Puntos de venta confirmados.
+- Calendario de ferias, eventos o colaboraciones.
+- Detalles comerciales para negocios: formatos, mínimos, zona de entrega y proceso de contacto.
+
+## Stack
+
+- Astro
+- TypeScript
+- Vue islands donde el template original lo requiere
+- Tailwind CSS / CSS moderno
+- Vercel adapter
+- Storyblok integrado en el template base, aunque la home actual usa datos locales en `src/data`
+
+## Estructura Principal
+
+```text
+src/
+  components/layout/      Header y footer del sitio del Duende
+  components/sections/    Secciones de la home
+  components/ui/          Componentes pequeños reutilizables
+  data/                   Datos locales de marca y cervezas demo
+  layouts/                Layout del sitio del Duende
+  pages/index.astro       Home principal
+  styles/duende.css       Estilos de marca
+public/images/            Logo y fotos reales
 ```
-STORYBLOK_PREVIEW_TOKEN=XXX
-STORYBLOK_PERSONAL_TOKEN=XXX
-STORYBLOK_SPACE_ID=000000
-STORYBLOK_REGION=eu
-LOCALE=en-US
-CURRENCY=USD
-SITE_LANG=en
-```
 
-Also add this to your netlify/vercel deploy settings.
+## Comandos
 
-
-### 🧰 2. Install dependencies
+Instalar dependencias:
 
 ```bash
 npm install
 ```
 
-### 🛠️ 3. Start Development server
+Levantar desarrollo local:
 
 ```bash
 npm run dev
 ```
 
-### 🔄 4. Sync your Storyblok Space
+Validar y construir producción:
 
-open `https://localhost:4321/setup`
-
-And sync your Datasources, Components, and stories. it is best to first delete before syncing. 
-_if a sync or delete fails, try to refresh the page ant try again._
-
-![Astrorante](https://astrorante.unfolding.io/screenshots/sync.png)
-
-### ⚙️ 5. Add your site to the astro.config and set your adapter (vercel or netlify)
-
-
-```javascript
-
-export default defineConfig({
-	site: 'https://your-website.com',
-	output: "hybrid",
-  	adapter: vercel(), // vercel() or netlify()
-
-    ....
-
+```bash
+npm run build
 ```
 
-## 💎 Premium Features
-Enjoy the freedom of no attribution, effortless integration with Mailgun, Postmark, or Slack for contact forms, and Mailchimp support for your newsletters. Plus, harness the power of premium page builder blocks to create stunning, customized layouts that captivate your audience.
+Previsualizar build:
 
-### 👉 [upgrade](https://shop.unfolding.io/b/IWyfD)
+```bash
+npm run preview
+```
 
-### 👉 [more information](https://astrogency.unfolding.io/blog/premium-components-and-features/)
+## Deploy
 
-- **Premium Components Unlocked in latest version**: All premium compomponents are now available in the free version, including carousel components, accordions, pricing tables, and more.
+El proyecto está desplegado en Vercel como:
 
+```text
+alfonsodelag-el-duende-del-crater
+```
 
+Para desplegar manualmente desde esta carpeta:
 
-## 🛸 Commands
+```bash
+vercel deploy --prebuilt --prod --yes --project alfonsodelag-el-duende-del-crater
+```
 
-All commands are run from the root of the project, from a terminal:
+Si se hacen cambios de código, primero corre:
 
-| Command                    | Action                                           |
-| -------------------------- | ------------------------------------------------ |
-| `npm install`              | Installs dependencies                            |
-| `npm run dev`              | Starts local dev server at `localhost:4321`      |
-| `npm run build`            | Build your production site to `./dist/`          |
-| `npm run preview`          | Preview your build locally, before deploying     |
-| `npm run astro ...`        | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`  | Get help using the Astro CL                      |
+```bash
+npm run build
+```
 
-## 👀 Want to learn more about Astro?
+## Notas de Desarrollo
 
-Check out [Astro documentation](https://docs.astro.build) or jump into Astro's [Discord server](https://astro.build/chat).
-
-## 📚 Tech Stack
-
-Astro, Storyblok CMS, Vue, TailwindCSS
-
-## 🛟 Support
-
-If you encounter any issues or bugs, we encourage you to open an issue in the repository. To help us quickly address the problem, please provide detailed information about the bug and steps to reproduce it.
-
-For those seeking priority assistance, we offer premium support services. Feel free to reach out to us by email at [hello@unfolding.io.](mailto:hello@unfolding.io.) We're here to help!
-
-
-## ☕️ Want to Caffeinate your Developer? 
-
-By [caffeinating](https://www.buymeacoffee.com/unfolding.io) your developer, you're not just getting the best out of them; you're also ensuring a cheerful and energetic work environment.😊
-
-[![buymeacoffee](https://starfunnel.unfolding.io/screenshots/bymeacoffee.webp)](https://www.buymeacoffee.com/unfolding.io)
-
-
-## 📸 Screenshots
-
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_0.png)
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_1.png)
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_2.png)
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_3.png)
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_4.png)
-![Astrorante](https://astrogency.unfolding.io/screenshots/Screenshot_5.png) 
-
-
-
-
-
-
+- No inventar datos de producto, precios, disponibilidad, distribuidores o testimonios.
+- Cualquier contenido provisional debe quedar marcado como `TODO` o `DEMO`.
+- El sitio representa una marca de cerveza artesanal, no un restaurante, bar o taproom.
+- Mantener el logo como activo oficial; no redibujarlo ni recolorearlo.
