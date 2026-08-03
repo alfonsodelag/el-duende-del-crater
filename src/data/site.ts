@@ -3,12 +3,13 @@ export const siteConfig = {
   location: "El Valle, Panamá",
   description:
     "Cervezas artesanales elaboradas en pequeños lotes en El Valle, Panamá. Descubre las creaciones, la historia y los próximos lanzamientos de El Duende del Cráter.",
-  canonicalUrl: "https://elduendedelcrater.com/",
+  canonicalUrl: "https://alfonsodelag-el-duende-del-crater.vercel.app/",
   whatsapp: "50763370513",
   whatsappDisplay: "6337-0513",
   instagram: "",
   email: "",
   logo: "/images/brand/duende-logo.png",
+  ogImage: "/images/brand/duende-whatsapp-preview.png",
   heroImage: "/images/gallery/duende-beer.png",
   teamImage: "/images/gallery/duende-team.png",
   // TODO: completar Instagram y email cuando el propietario los comparta.
