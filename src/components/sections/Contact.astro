@@ -9,7 +9,7 @@ import { siteConfig, whatsappLinks } from "@/data/site";
     eyebrow="Contacto"
     id="contact-title"
     title="Pedidos, preguntas y oportunidades"
-    text="Los datos de contacto reales todavía están pendientes. Los botones usan enlaces placeholder con mensajes precargados para no inventar número, correo ni redes."
+    text="Escríbele al Duende por WhatsApp para consultar disponibilidad, próximos lotes o propuestas comerciales. Instagram y email quedan pendientes de confirmación."
   />
   <div class="contact-grid">
     <div class="contact-panel">
@@ -23,7 +23,7 @@ import { siteConfig, whatsappLinks } from "@/data/site";
       <Button href={whatsappLinks.business} variant="secondary">Solicita información</Button>
     </div>
     <dl class="contact-list">
-      <div><dt>WhatsApp</dt><dd>{siteConfig.whatsapp || "TODO confirmar"}</dd></div>
+      <div><dt>WhatsApp</dt><dd><a href={whatsappLinks.personal}>{siteConfig.whatsappDisplay}</a></dd></div>
       <div><dt>Instagram</dt><dd>{siteConfig.instagram || "TODO confirmar"}</dd></div>
       <div><dt>Email</dt><dd>{siteConfig.email || "TODO confirmar"}</dd></div>
     </dl>
