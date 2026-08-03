@@ -1,0 +1,23 @@
+---
+import Button from "@components/ui/Button.astro";
+import Badge from "@components/ui/Badge.astro";
+---
+
+<section class="section-shell batch-section" aria-labelledby="batch-title">
+  <div class="batch-poster">
+    <div>
+      <Badge tone="red">DEMO / editable</Badge>
+      <h2 id="batch-title">Lote destacado pendiente</h2>
+      <p>
+        Este bloque queda preparado para un lanzamiento, colaboración o cerveza
+        experimental. No hay fecha, unidades ni disponibilidad confirmadas.
+      </p>
+    </div>
+    <dl>
+      <div><dt>Lote</dt><dd>TODO</dd></div>
+      <div><dt>Fecha</dt><dd>Por confirmar</dd></div>
+      <div><dt>Disponibilidad</dt><dd>Consulta al brewer</dd></div>
+    </dl>
+    <Button href="#contacto">Descubre el lote</Button>
+  </div>
+</section>

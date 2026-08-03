@@ -14,25 +14,21 @@ import {
   settingsSchema,
 } from "./content/storyBlockSchema";
 
-//check if the settings are valid
-const isSetup = await getSettings(
-  undefined,
-);
-
-if (!!isSetup.setup) {
-  throw new Error(
-    "No settings found, Import all data sources, components and stories, then restart the server.",
-  );
-}
+const initialSettings = await getSettings(undefined);
+const hasStoryblokSettings = !initialSettings.setup;
 
 // Define entry types
 
 
-const siteLocales = await getLocales();
+const siteLocales = hasStoryblokSettings
+  ? await getLocales().catch(() => ["es"])
+  : ["es"];
 
 /* First experiment on using a data layer on settings */
 const settings = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const settings = await getSettings(
@@ -52,6 +48,8 @@ const settings = defineCollection({
 
 const page = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const pages = await getCollectionData({
@@ -75,6 +73,8 @@ const page = defineCollection({
 
 const post = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -98,6 +98,8 @@ const post = defineCollection({
 
 const work = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -121,6 +123,8 @@ const work = defineCollection({
 
 const service = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -144,6 +148,8 @@ const service = defineCollection({
 
 const work_category = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -167,6 +173,8 @@ const work_category = defineCollection({
 
 const blog_category = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -206,6 +214,8 @@ const locales = defineCollection({
 
 const contact_topics = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -229,6 +239,8 @@ const contact_topics = defineCollection({
 
 const stack = defineCollection({
   loader: async () => {
+    if (!hasStoryblokSettings) return [];
+
     const data = await Promise.all(
       siteLocales.map(async (lang) => {
         const posts = await getCollectionData({
@@ -262,3 +274,4 @@ export const collections = {
   contact_topics,
   stack,
 };
+

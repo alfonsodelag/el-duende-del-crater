@@ -1,0 +1,31 @@
+---
+import Button from "@components/ui/Button.astro";
+import SectionHeading from "@components/ui/SectionHeading.astro";
+import { siteConfig, whatsappLinks } from "@/data/site";
+---
+
+<section class="section-shell contact-section" id="contacto" aria-labelledby="contact-title">
+  <SectionHeading
+    eyebrow="Contacto"
+    id="contact-title"
+    title="Pedidos, preguntas y oportunidades"
+    text="Los datos de contacto reales todavía están pendientes. Los botones usan enlaces placeholder con mensajes precargados para no inventar número, correo ni redes."
+  />
+  <div class="contact-grid">
+    <div class="contact-panel">
+      <h3>Pedido personal</h3>
+      <p>Para consultar cervezas disponibles, formatos y próximos lotes.</p>
+      <Button href={whatsappLinks.personal}>Pide al Duende</Button>
+    </div>
+    <div class="contact-panel contact-panel-dark">
+      <h3>Consulta comercial</h3>
+      <p>Bares, restaurantes, hoteles, tiendas, distribuidores, ferias y colaboraciones.</p>
+      <Button href={whatsappLinks.business} variant="secondary">Solicita información</Button>
+    </div>
+    <dl class="contact-list">
+      <div><dt>WhatsApp</dt><dd>{siteConfig.whatsapp || "TODO confirmar"}</dd></div>
+      <div><dt>Instagram</dt><dd>{siteConfig.instagram || "TODO confirmar"}</dd></div>
+      <div><dt>Email</dt><dd>{siteConfig.email || "TODO confirmar"}</dd></div>
+    </dl>
+  </div>
+</section>

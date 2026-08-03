@@ -1,0 +1,34 @@
+---
+import Button from "@components/ui/Button.astro";
+import Badge from "@components/ui/Badge.astro";
+import { siteConfig, whatsappLinks } from "@/data/site";
+---
+
+<section class="hero section-shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <Badge>El Valle, Panamá</Badge>
+    <h1 id="hero-title">{siteConfig.name}</h1>
+    <p class="hero-subtitle">Cerveza artesanal nacida entre malta, fuego y leyenda.</p>
+    <p>
+      Pequeños lotes elaborados en El Valle, Panamá, para quienes prefieren una
+      cerveza con carácter y una historia que se queda rondando.
+    </p>
+    <div class="button-row">
+      <Button href="#cervezas">Conoce las cervezas</Button>
+      <Button href={whatsappLinks.personal} variant="secondary">Pide al Duende</Button>
+    </div>
+  </div>
+  <div class="hero-stage" aria-label="Ilustración abstracta de botella, cráter y espuma">
+    <div class="sun"></div>
+    <div class="mountain mountain-back"></div>
+    <div class="mountain mountain-front"></div>
+    <div class="crater"></div>
+    <div class="bottle">
+      <span class="bottle-neck"></span>
+      <span class="bottle-label">TODO<br />asset real</span>
+    </div>
+    <span class="bubble bubble-one"></span>
+    <span class="bubble bubble-two"></span>
+    <span class="bubble bubble-three"></span>
+  </div>
+</section>

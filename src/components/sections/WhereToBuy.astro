@@ -1,0 +1,31 @@
+---
+import Button from "@components/ui/Button.astro";
+import SectionHeading from "@components/ui/SectionHeading.astro";
+import { whatsappLinks } from "@/data/site";
+---
+
+<section class="section-shell where-section" id="donde" aria-labelledby="where-title">
+  <SectionHeading
+    eyebrow="Dónde conseguirlas"
+    id="where-title"
+    title="Pregúntale al Duende antes de salir a buscar"
+    text="La marca no tiene local propio publicado en este repositorio. El bloque está preparado para pedidos directos, ferias, tiendas, restaurantes, hoteles y distribuidores confirmados."
+  />
+  <div class="where-grid">
+    <article>
+      <h3>Pedidos directos</h3>
+      <p>Consulta disponibilidad por WhatsApp cuando el número esté confirmado.</p>
+      <Button href={whatsappLinks.personal} variant="secondary">Consultar disponibilidad</Button>
+    </article>
+    <article>
+      <h3>Puntos de venta</h3>
+      <p>Próximamente: tiendas, bares, restaurantes o ferias con información real.</p>
+      <span class="status-pill">Por confirmar</span>
+    </article>
+    <article>
+      <h3>Eventos</h3>
+      <p>Espacio listo para ferias, colaboraciones y lanzamientos de temporada.</p>
+      <span class="status-pill">TODO calendario</span>
+    </article>
+  </div>
+</section>

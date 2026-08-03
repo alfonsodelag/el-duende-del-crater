@@ -1,0 +1,26 @@
+---
+import { brewingSteps } from "@/data/site";
+import SectionHeading from "@components/ui/SectionHeading.astro";
+---
+
+<section class="process-section" aria-labelledby="process-title">
+  <div class="section-shell">
+    <SectionHeading
+      eyebrow="Proceso artesanal"
+      id="process-title"
+    title="Del primer chispazo al lote listo"
+      text="Una mirada breve al camino de cada receta, pensada para comunicar cuidado y oficio sin ponerse demasiado técnica."
+    />
+    <ol class="process-grid">
+      {
+        brewingSteps.map((step, index) => (
+          <li>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

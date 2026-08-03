@@ -1,0 +1,33 @@
+---
+import type { Beer } from "@/data/beers";
+import Badge from "./Badge.astro";
+
+interface Props {
+  beer: Beer;
+}
+
+const { beer } = Astro.props;
+---
+
+<article class="beer-card" style={`--beer-accent: ${beer.accentColor ?? "#f19d27"}`}>
+  <div class="beer-visual" aria-hidden="true">
+    <span class="can-shape"></span>
+    <span class="foam-dot dot-a"></span>
+    <span class="foam-dot dot-b"></span>
+  </div>
+  <div class="beer-card-body">
+    <div class="beer-card-topline">
+      {beer.batch && <Badge tone="red">{beer.batch}</Badge>}
+      {beer.limitedEdition && <Badge>lote limitado</Badge>}
+    </div>
+    <h3>{beer.name}</h3>
+    <p class="beer-style">{beer.style}</p>
+    <p>{beer.shortDescription}</p>
+    <dl class="beer-meta">
+      {beer.abv && <><dt>ABV</dt><dd>{beer.abv}%</dd></>}
+      {beer.ibu && <><dt>IBU</dt><dd>{beer.ibu}</dd></>}
+      {beer.availability && <><dt>Estado</dt><dd>{beer.availability}</dd></>}
+    </dl>
+    <a href="#contacto" class="text-link">Consultar esta cerveza</a>
+  </div>
+</article>

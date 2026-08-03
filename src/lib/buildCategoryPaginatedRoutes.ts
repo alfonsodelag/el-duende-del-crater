@@ -8,6 +8,11 @@ type ItemWithCategoryRefs = {
   category?: Array<string | { uuid: string }>;
 };
 
+type CategoryData = {
+  uuid?: string;
+  slug?: string;
+};
+
 export async function buildCategoryPaginatedRoutes(
   paginate: PaginateFunction,
   options: {
@@ -16,7 +21,7 @@ export async function buildCategoryPaginatedRoutes(
     pageSize?: number;
     onMissingSettings: () => Response;
   },
-): Promise<GetStaticPathsResult | Response> {
+): Promise<GetStaticPathsResult> {
   const pageSize = options.pageSize ?? 10;
   const locales = (await getCollection("locales")).map((locale) => locale.id);
 
@@ -31,11 +36,11 @@ export async function buildCategoryPaginatedRoutes(
     ]);
 
     if (!settings) {
-      return options.onMissingSettings();
+      return [];
     }
 
     const postsData = posts.map((post) => post.data) as ItemWithCategoryRefs[];
-    const categoriesData = categories.map((category) => category.data);
+    const categoriesData = categories.map((category) => category.data) as CategoryData[];
     const settingsData = settings.data;
 
     const indexPages = paginate(postsData, { pageSize });
@@ -55,7 +60,7 @@ export async function buildCategoryPaginatedRoutes(
     const categoryPages = Object.entries(groupedByCategory).flatMap(
       ([categoryId, categoryPosts]) => {
         const category = categoriesData.find((cat) => cat.uuid === categoryId);
-        if (!category) return [];
+        if (!category?.slug) return [];
 
         return paginate(categoryPosts, { pageSize }).map((page) => ({
           params: {
@@ -94,8 +99,6 @@ export async function buildCategoryPaginatedRoutes(
   });
 
   const results = await Promise.all(pages);
-  const redirect = results.find((r): r is Response => r instanceof Response);
-  if (redirect) return redirect;
 
   return results.flat() as GetStaticPathsResult;
 }

@@ -1,0 +1,83 @@
+---
+import { navigation, siteConfig, whatsappLinks } from "@/data/site";
+---
+
+<header class="site-header" data-menu-root>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <nav class="nav-shell" aria-label="Navegación principal">
+    <a class="brand-mark" href="/" aria-label="Inicio de El Duende del Cráter">
+      {
+        siteConfig.logo ? (
+          <img src={siteConfig.logo} alt="El Duende del Cráter" width="160" height="72" />
+        ) : (
+          <span class="brand-wordmark">
+            <span>El Duende</span>
+            <small>del Cráter</small>
+          </span>
+        )
+      }
+    </a>
+
+    <div class="desktop-links">
+      {
+        navigation.map((item) => (
+          <a href={item.href}>
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <a class="button button-small" href={whatsappLinks.personal}>Pide al Duende</a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    {
+      navigation.map((item) => (
+        <a href={item.href} data-menu-link>
+          {item.label}
+        </a>
+      ))
+    }
+    <a class="button" href={whatsappLinks.personal} data-menu-link>Consulta disponibilidad</a>
+  </div>
+</header>
+
+<script>
+  const root = document.querySelector("[data-menu-root]");
+  const toggle = root?.querySelector("[data-menu-toggle]");
+  const menu = root?.querySelector("[data-mobile-menu]");
+  const links = root?.querySelectorAll("[data-menu-link]");
+
+  const setOpen = (open: boolean) => {
+    if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    menu.hidden = !open;
+    document.body.classList.toggle("menu-is-open", open);
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setOpen(!isOpen);
+  });
+
+  links?.forEach((link) => link.addEventListener("click", () => setOpen(false)));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+</script>

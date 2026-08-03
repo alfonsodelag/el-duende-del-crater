@@ -1,0 +1,18 @@
+---
+import Button from "@components/ui/Button.astro";
+import { whatsappLinks } from "@/data/site";
+---
+
+<section class="business-band" id="negocios" aria-labelledby="business-title">
+  <div class="section-shell business-grid">
+    <div>
+      <p class="eyebrow">Para negocios</p>
+      <h2 id="business-title">Lleva al Duende a tu negocio</h2>
+      <p>
+        Consulta disponibilidad para puntos de venta, eventos, colaboraciones y
+        distribución. Este CTA separa las consultas comerciales de los pedidos personales.
+      </p>
+    </div>
+    <Button href={whatsappLinks.business}>Hablemos de distribución</Button>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import { featuredBeers } from "@/data/beers";
+import BeerCard from "@components/ui/BeerCard.astro";
+import SectionHeading from "@components/ui/SectionHeading.astro";
+---
+
+<section class="section-shell beers-section" id="cervezas" aria-labelledby="beers-title">
+  <SectionHeading
+    eyebrow="Catálogo en construcción"
+    id="beers-title"
+    title="Cervezas destacadas"
+    text="La sección está lista para productos reales. Por ahora, las tarjetas DEMO muestran la estructura sin inventar datos oficiales."
+  />
+  <div class="beer-grid">
+    {featuredBeers.map((beer) => <BeerCard beer={beer} />)}
+  </div>
+</section>

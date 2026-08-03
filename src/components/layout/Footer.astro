@@ -1,0 +1,32 @@
+---
+import { navigation, siteConfig, whatsappLinks } from "@/data/site";
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-brand">{siteConfig.name}</p>
+      <p>
+        Cerveza artesanal de {siteConfig.location}. Hecha en pequeños lotes,
+        con datos comerciales por confirmar antes de publicar catálogo oficial.
+      </p>
+    </div>
+    <nav aria-label="Navegación de pie de página">
+      {
+        navigation.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))
+      }
+    </nav>
+    <div>
+      <p class="footer-kicker">Contacto</p>
+      <a href={whatsappLinks.personal}>WhatsApp pendiente</a>
+      <span>Instagram pendiente</span>
+      <span>Email pendiente</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} {siteConfig.name}</span>
+    <span>Disfruta con responsabilidad. Producto para mayores de edad.</span>
+  </div>
+</footer>

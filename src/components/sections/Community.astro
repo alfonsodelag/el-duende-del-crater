@@ -1,0 +1,16 @@
+---
+import { socialTiles } from "@/data/site";
+import SectionHeading from "@components/ui/SectionHeading.astro";
+---
+
+<section class="section-shell community-section" aria-labelledby="community-title">
+  <SectionHeading
+    eyebrow="Comunidad"
+    id="community-title"
+    title="Ferias, proceso y pequeñas apariciones"
+    text="Sin integración pesada de Instagram por ahora. La cuadrícula queda lista para fotos reales del proceso, clientes, eventos y colaboraciones."
+  />
+  <div class="social-grid">
+    {socialTiles.map((tile) => <div><span>TODO</span><p>{tile}</p></div>)}
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import Header from "@components/layout/Header.astro";
+import Footer from "@components/layout/Footer.astro";
+import BusinessCTA from "@components/sections/BusinessCTA.astro";
+import Brewer from "@components/sections/Brewer.astro";
+import BrewingProcess from "@components/sections/BrewingProcess.astro";
+import Community from "@components/sections/Community.astro";
+import Contact from "@components/sections/Contact.astro";
+import FeaturedBatch from "@components/sections/FeaturedBatch.astro";
+import FeaturedBeers from "@components/sections/FeaturedBeers.astro";
+import Hero from "@components/sections/Hero.astro";
+import Legend from "@components/sections/Legend.astro";
+import WhereToBuy from "@components/sections/WhereToBuy.astro";
+import DuendeLayout from "@layouts/DuendeLayout.astro";
+import { siteConfig } from "@/data/site";
+
+const title = "El Duende del Cráter | Cerveza artesanal de El Valle, Panamá";
+---
+
+<DuendeLayout title={title} description={siteConfig.description} canonicalUrl={siteConfig.canonicalUrl}>
+  <Header />
+  <main id="contenido">
+    <Hero />
+    <FeaturedBeers />
+    <Legend />
+    <FeaturedBatch />
+    <Brewer />
+    <BrewingProcess />
+    <WhereToBuy />
+    <BusinessCTA />
+    <Community />
+    <Contact />
+  </main>
+  <Footer />
+</DuendeLayout>
